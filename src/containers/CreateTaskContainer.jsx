@@ -26,7 +26,7 @@ const CreateTaskContainer = ({ addTask }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!taskName) return;
+    if (!taskName || invalidLength) return;
     addTask(task);
     setTaskName("");
     setTask({ ...task, name: "" });
