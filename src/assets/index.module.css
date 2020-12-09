@@ -1,0 +1,148 @@
+.task_manager_container {
+  margin: auto;
+  min-height: 800px;
+  width: 70%;
+  border-radius: 50px;
+  box-shadow: 15px 15px 30px 8px rgb(4, 13, 41);
+  padding: 1.3rem 0;
+  /* background-image: url("https://st2.depositphotos.com/4279437/9929/v/950/depositphotos_99299482-stock-illustration-todo-list-seamless-pattern-universal.jpg"); */
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpY_YzVNhdjhmFiK01tqqS5moIwkVG4uNj5A&usqp=CAU"); */
+  /* background-image: url("https://iphone-wallpaper.pics/wallpaper/a/p/apple-iphone-8-hd-official-wallpaper-dark-3-by-wallart_37d0353eacd1946ec7368bae4a4d04de_raw.jpg"); */
+  /* background-image: url("https://ak.picdn.net/shutterstock/videos/6575624/thumb/1.jpg"); */
+  background-image: url("https://www.learnetic.com/wp-content/uploads/2016/10/mA-Orange-1-blurred-background-10-2000x1250.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* header */
+.title {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  margin: 2%;
+}
+.subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+}
+/* header */
+
+/* input form */
+.form {
+  margin: 35px auto;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 20px -3px rgb(6, 20, 63);
+  border-radius: 20px;
+}
+/* input form */
+
+/* task list */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  width: 30vw;
+  box-shadow: 0px 2px 20px -3px grey;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.767);
+}
+.taskItem {
+  height: 100%;
+  width: 200px;
+  flex: 2;
+  position: relative;
+  z-index: 100 !important;
+  border-radius: 20px;
+}
+.task {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.task li {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.658);
+}
+.appear {
+  display: flex;
+  padding-left: 10px;
+  flex: 1;
+  align-items: stretch;
+  flex-direction: row;
+  position: absolute;
+  left: 98%;
+  width: 0px;
+  z-index: 1;
+  opacity: 0;
+  justify-content: space-evenly;
+}
+.task:hover .appear {
+  opacity: 1;
+  transition: width 0.3s linear;
+  width: 150px;
+}
+/* task list */
+
+/* handle status */
+.inprogress {
+  background-color: #2734b4 !important;
+  color: white !important;
+  width: 40% !important;
+}
+.finished {
+  background-color: #1f8a23 !important;
+  color: white !important;
+  width: 40% !important;
+}
+.suspend {
+  background-color: #c61a1a !important;
+  color: white !important;
+  width: 40% !important;
+}
+.delete {
+  background-color: red !important;
+  color: white !important;
+  width: 40% !important;
+}
+/* handle status */
+
+.pending_status,
+.inprogress_status,
+.finished_status,
+.suspend_status,
+.off_status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 70%;
+  margin: 5px auto;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+/* status colors */
+.pending_status {
+  background-color: #ffce33;
+  box-shadow: 0px 2px 20px -3px #ffce33;
+}
+.inprogress_status {
+  background-color: #2734b4;
+  box-shadow: 0px 2px 20px -3px #2734b4;
+}
+.finished_status {
+  background-color: #1f8a23;
+  box-shadow: 0px 2px 20px -3px #1f8a23;
+}
+.suspend_status {
+  background-color: #c61a1a;
+  box-shadow: 0px 2px 20px -3px #c61a1a;
+}
+.off_status {
+  background-color: rgb(235, 235, 235);
+  box-shadow: 0px 2px 20px -3px rgb(235, 235, 235);
+}
+/* status colors */
