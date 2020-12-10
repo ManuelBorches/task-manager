@@ -33,6 +33,11 @@ const TaskListContainer = ({ tasks, editTask, deleteTask, editTaskStatus }) => {
     setEditing(false);
   };
 
+  const handleSubmit = (event, index) => {
+    event.preventDefault();
+    handleEdit(index);
+  };
+
   const enableEditing = (taskName, index) => {
     setTaskEditing(index);
     setTaskName(taskName);
@@ -67,6 +72,7 @@ const TaskListContainer = ({ tasks, editTask, deleteTask, editTaskStatus }) => {
       invalidLength={invalidLength}
       handleDelete={handleDelete}
       handleStatus={handleStatus}
+      handleSubmit={handleSubmit}
     />
   );
 };

@@ -27,6 +27,7 @@ export default function TasksList({
   invalidLength,
   handleDelete,
   handleStatus,
+  handleSubmit,
 }) {
   return (
     <div className={style.container}>
@@ -57,7 +58,11 @@ export default function TasksList({
                   </ListItemAvatar>
                   {editing && taskEditing === index ? (
                     <>
-                      <form noValidate autoComplete="off">
+                      <form
+                        noValidate
+                        autoComplete="off"
+                        onSubmit={(event) => handleSubmit(event, index)}
+                      >
                         <TextField
                           id="standard-basic"
                           label="Standard"
