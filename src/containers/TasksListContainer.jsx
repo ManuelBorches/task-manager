@@ -50,7 +50,6 @@ const TaskListContainer = ({ tasks, editTask, deleteTask, editTaskStatus }) => {
 
   const changeValue = (event) => {
     const value = event.target.value;
-    console.log(value.length);
     setInvalidLength(value.length < 1 || value.length > 10);
     if (invalidLength && value.length > 10) return;
     setTaskName(value);
